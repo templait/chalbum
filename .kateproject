@@ -1,4 +1,0 @@
-{
-"name":"chalbum",
-"files": [ { "filters": ["*.rb", "*.yml", "*.md", "Gemfile", "Capfile", "Rakefile", "README.*"], "recursive": 1 } ]
-}
