@@ -1,3 +1,5 @@
 VPATH += $$PWD
 
-SOURCES=main.qml MainWindow.qml ActionController.qml
+SOURCES=main.qml Settings.qml MainWindow.qml ActionController.qml
+
+include(./components/components.pri)
