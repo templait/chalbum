@@ -4,7 +4,10 @@ import "./components"
 import "."
 
 ApplicationWindow {
+	width: 800
+	height: 600
 	LineEdit {
+		placeholderText: "Type some text here"
 	}
 
 	ActionController {

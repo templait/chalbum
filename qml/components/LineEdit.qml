@@ -1,9 +1,15 @@
 import QtQuick 2.5
+import QtQuick.Controls 2.0
 import "."
 
-Rectangle {
-	color: "#0037ff"
-	width: 200
-	height: 30
-	Component.onCompleted: {console.error(Style.ordinarFont.family)}
+TextField {
+	font: Style.ordinaryFont
+	color: Style.ordinaryTextColor
+	background: Rectangle {
+		border.color: Style.borderColor
+		border.width: 1
+		radius: 3
+		width: 200
+		height: 30
+	}
 }
