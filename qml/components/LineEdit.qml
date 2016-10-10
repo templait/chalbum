@@ -3,8 +3,8 @@ import QtQuick.Controls 2.0
 import "."
 
 TextField {
-	font: Style.ordinaryFont
-	color: Style.ordinaryTextColor
+	font: Style.regularFont
+	color: Style.regularTextColor
 	background: Rectangle {
 		border.color: Style.borderColor
 		border.width: 1
