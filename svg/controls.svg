@@ -90,11 +90,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="249.17608"
-     inkscape:cy="893.62255"
+     inkscape:zoom="1.4"
+     inkscape:cx="436.23718"
+     inkscape:cy="927.60351"
      inkscape:document-units="px"
-     inkscape:current-layer="g6429-4"
+     inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -379,5 +379,12 @@
            id="path16057-0" />
       </g>
     </g>
+    <rect
+       style="fill:#ff0000;stroke:none"
+       id="rect3368-6"
+       width="50"
+       height="50"
+       x="830"
+       y="22.362162" />
   </g>
 </svg>
