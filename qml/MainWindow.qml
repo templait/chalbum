@@ -1,9 +1,14 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import "./components"
+import "./forms"
 import "."
 
 ApplicationWindow {
+	Component {
+		id: person
+		PersonForm{}
+	}
 	width: 800
 	height: 600
 	Column {
@@ -12,7 +17,7 @@ ApplicationWindow {
 		}
 		FloatingButton
 		{
-			onClicked: {console.log("button")}
+			onClicked: ShowDialog.open(person)
 		}
 	}
 
@@ -24,5 +29,10 @@ ApplicationWindow {
 
 	Component.onCompleted: {
 		actionController.index()
+	}
+
+	DialogContainer {
+		anchors.fill: parent
+		visible: ShowDialog.show
 	}
 }
