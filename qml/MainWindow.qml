@@ -6,9 +6,16 @@ import "."
 ApplicationWindow {
 	width: 800
 	height: 600
-	LineEdit {
-		placeholderText: "Type some text here"
+	Column {
+		LineEdit {
+			placeholderText: "Type some text here"
+		}
+		FloatingButton
+		{
+			onClicked: {console.log("button")}
+		}
 	}
+
 
 	ActionController {
 		id: actionController
@@ -17,6 +24,5 @@ ApplicationWindow {
 
 	Component.onCompleted: {
 		actionController.index()
-		//console.error(Settings.style.fontFamily)
 	}
 }

@@ -7,7 +7,7 @@ QtObject {
 
 	function index() {
 		__sendRequest(function(r) {
-            console.error(r.responseText)
+			console.log(r.responseText)
 		})
 	}
 

@@ -1,3 +1,5 @@
 VPATH += $$PWD
 
-SOURCES+=Style.qml LineEdit.qml
+DISTFILES +=	Style.qml \
+                LineEdit.qml \
+                FloatingButton.qml
