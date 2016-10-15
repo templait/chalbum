@@ -7,17 +7,32 @@ import "."
 ApplicationWindow {
 	Component {
 		id: person
-		PersonForm{}
-	}
-	width: 800
-	height: 600
-	Column {
-		LineEdit {
-			placeholderText: "Type some text here"
+		PersonForm{
 		}
-		FloatingButton
+	}
+	Row {
+		anchors {
+			top: parent.top
+			bottom: parent.bottom
+		}
+		Rectangle
 		{
-			onClicked: ShowDialog.open(person)
+			id: personPanel
+			color: "#777777"
+			width: 100
+			anchors {
+				top: parent.top
+				bottom: parent.bottom
+				}
+				FloatingButton
+				{
+					onClicked: ShowDialog.open(person)
+					anchors {
+						horizontalCenter: parent.right
+						bottom: parent.bottom
+						bottomMargin: Style.moduleSize*2
+					}
+				}
 		}
 	}
 
