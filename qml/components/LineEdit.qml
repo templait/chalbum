@@ -4,6 +4,7 @@ import "."
 Rectangle {
 	property alias placeholderText: placeholder.text
 	property alias length: input.length
+	property alias text: input.text
 
 	border.color: Style.borderColor
 	border.width: 1

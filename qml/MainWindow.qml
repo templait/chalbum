@@ -8,6 +8,7 @@ ApplicationWindow {
 	Component {
 		id: person
 		PersonForm{
+			title: qsTr("Новая персона")
 		}
 	}
 	Row {

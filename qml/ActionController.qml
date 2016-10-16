@@ -5,10 +5,16 @@ QtObject {
 	//! type:string Путь к сущности на сервисе.
 	property string path
 
+	function requestHandler(r) {
+		console.log(r.responseText)
+	}
+
 	function index() {
-		__sendRequest(function(r) {
-			console.log(r.responseText)
-		})
+		__sendRequest(requestHandler)
+	}
+
+	function newEntity(value) {
+		__sendRequest(requestHandler, "POST", value)
 	}
 
 	function __sendRequest(callback, method, value, e_path) {
