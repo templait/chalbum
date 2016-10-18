@@ -1,26 +1,22 @@
 import QtQuick 2.0
+import ".."
 import "../components"
 
 Item {
 	property string title: qsTr("Персона")
-	property var person: JSON.parse('{"name":"Aly"}')
-
-	Binding {target: person; property: "name"; value: 'ffff'}
+	property var person: JSON.parse('{}')
 
 	width: 300
 	height: 200
 	Row {
 		LineEdit {
-			id: ffff
+			id: leName
 			placeholderText: qsTr("Имя")
-			//text: person.name
 		}
-		Text {
-			text: person.name
+		RaisedButton {
+			content: Rectangle {width: 100; height: 50; color: "red"}
+			onClicked: {console.log(person.name)}
 		}
 	}
-
-	Component.onCompleted: {
-		console.log(person.name)
-	}
+	Binder {source: leName; sourceProperty: "text"; target: person; targetProperty: "name"}
 }
