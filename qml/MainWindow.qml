@@ -16,11 +16,10 @@ ApplicationWindow {
 			top: parent.top
 			bottom: parent.bottom
 		}
-		Rectangle
+		PeopleView
 		{
-			id: personPanel
-			color: "#777777"
-			width: 100
+			id: peopleView
+			width: 200
 			anchors {
 				top: parent.top
 				bottom: parent.bottom
@@ -35,16 +34,6 @@ ApplicationWindow {
 					}
 				}
 		}
-	}
-
-
-	ActionController {
-		id: actionController
-		path: Settings.baseURL + "/people"
-	}
-
-	Component.onCompleted: {
-		actionController.index()
 	}
 
 	DialogContainer {

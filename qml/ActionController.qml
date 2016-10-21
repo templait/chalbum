@@ -5,11 +5,17 @@ QtObject {
 	//! type:string Путь к сущности на сервисе.
 	property string path
 
+	signal indexReceived(var request)
+
 	function requestHandler(r) {
 		console.log(r.responseText)
 	}
 
 	function index() {
+		__sendRequest(indexReceived)
+	}
+
+	function show() {
 		__sendRequest(requestHandler)
 	}
 
