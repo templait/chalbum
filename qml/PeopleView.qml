@@ -2,42 +2,43 @@ import QtQuick 2.0
 import "."
 
 ListView {
-	property var model
+	model: ListModel{}
+
 	ActionController {
 		id: peopleController
 		path: Settings.baseURL + "/people"
 		onIndexReceived: {
-			//model = JSON.parse(request.responseText)
+			JSON.parse(request.responseText).forEach(function(e){
+				model.append(e)
+			})
 		}
 	}
 
-	//Component.onCompleted: {peopleController.index()}
+	Component.onCompleted: {peopleController.index()}
 
-	width: 640
-	height: 480
-	model :  ListModel {
-		ListElement {
-			name: "Bill Smith"
-			number: "555 3264"
+	/*delegate: Item {
+		width: 401
+		height: 131
+		Column {
+			anchors.fill: parent
+			Rectangle {
+				height: 10//parent.height-1
+				anchors {left: parent.left; right: parent.right}
+				color: "white"
+				Row {
+					Text {
+						text: name
+					}
+				}
+			}
+			Rectangle {
+				height: 1
+				anchors {left: parent.left; right: parent.right}
+				color: "#808080"
+			}
 		}
-		ListElement {
-			name: "John Brown"
-			number: "555 8426"
-		}
-		ListElement {
-			name: "Sam Wise"
-			number: "555 0473"
-		}
-	}
-
-	/*delegate: LineEdit {
-		text: name
 	}*/
-	delegate: Rectangle {
-		color: "red"
-		width: 100
-		height: 30
-	}
 
-	Component.onCompleted: {console.log(model.count)}
+	delegate: PersonDelegate{}
 }
+

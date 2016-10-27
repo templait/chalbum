@@ -1,13 +1,13 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.4
 import "./components"
-import "./forms"
 import "."
+import "Forms" 1.0 as Forms
 
 ApplicationWindow {
 	Component {
 		id: person
-		PersonForm{
+		Forms.Person{
 			title: qsTr("Новая персона")
 		}
 	}
