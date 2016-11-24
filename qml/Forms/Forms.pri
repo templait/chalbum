@@ -1,4 +1,4 @@
 VPATH += $$PWD
 
 DISTFILES += \
-    Person.qml
+    Person.qml PersonForm.qml

@@ -1,6 +1,6 @@
 import QtQuick 2.0
 import ".."
-import "../components"
+import "../Components"
 
 Item {
 	property string title: qsTr("Персона")

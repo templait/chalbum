@@ -1,7 +1,9 @@
 VPATH += $$PWD
 
+DISTFILES += qmldir
+
 DISTFILES +=	Style.qml \
                 LineEdit.qml \
                 FloatingButton.qml \
-    $$PWD/CloseButton.qml \
-    $$PWD/RaisedButton.qml
+                CloseButton.qml \
+                RaisedButton.qml

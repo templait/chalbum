@@ -1,0 +1,5 @@
+module Components
+
+CloseButton 1.0 CloseButton.qml
+
+singleton Style 1.0 Style.qml

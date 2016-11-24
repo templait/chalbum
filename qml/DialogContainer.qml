@@ -1,6 +1,6 @@
 import QtQuick 2.0
+import "Components" 1.0 as Components
 import "."
-import "./components"
 
 Rectangle {
 	MouseArea {
@@ -9,8 +9,8 @@ Rectangle {
 	}
 	Rectangle {
 		anchors.centerIn: parent
-		color: Style.formColor
-		width: dialogLoader.implicitWidth + Style.moduleSize*2
+		color: Components.Style.formColor
+		width: dialogLoader.implicitWidth + Components.Style.moduleSize*2
 		height: dialogLoader.implicitHeight + title.height
 		Item {
 			id: title
@@ -18,18 +18,18 @@ Rectangle {
 				top: parent.top
 				left: parent.left
 				right: parent.right
-				margins: Style.moduleSize
+				margins: Components.Style.moduleSize
 			}
-			height: label.implicitHeight+Style.moduleSize
+			height: label.implicitHeight+Components.Style.moduleSize
 			Text {
 				id: label
 				anchors {
 					horizontalCenter: parent.horizontalCenter
 					left: parent.left
 				}
-				font: Style.header2Font
+				font: Components.Style.header2Font
 			}
-			CloseButton {
+			Components.CloseButton {
 				anchors.right: parent.right
 				anchors.top: parent.top
 				onClicked: ShowDialog.close()
@@ -39,10 +39,10 @@ Rectangle {
 			id: dialogLoader
 			sourceComponent: ShowDialog.content
 			anchors {
-				topMargin: Style.moduleSize*3
+				topMargin: Components.Style.moduleSize*3
 				top: title.bottom
 			}
-			x: Style.moduleSize
+			x: Components.Style.moduleSize
 
 			onLoaded: { label.text = item.title }
 		}
